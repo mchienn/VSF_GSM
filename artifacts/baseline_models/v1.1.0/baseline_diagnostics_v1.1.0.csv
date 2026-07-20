@@ -1,0 +1,13 @@
+task,delay_minutes,data_split,route_service_exact_match_rate
+price,5,calibration,1.0
+multiplier,5,calibration,1.0
+price,5,test,1.0
+multiplier,5,test,1.0
+price,15,calibration,1.0
+multiplier,15,calibration,1.0
+price,15,test,1.0
+multiplier,15,test,1.0
+price,30,calibration,1.0
+multiplier,30,calibration,1.0
+price,30,test,1.0
+multiplier,30,test,1.0

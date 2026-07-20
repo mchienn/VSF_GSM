@@ -1,0 +1,10 @@
+check_id,status,evidence
+D05_PRICE_PREDICTIONS,PASS,price predictions complete
+D05_MULTIPLIER_PREDICTIONS,PASS,multiplier predictions complete
+D05_TRAIN_ONLY_LOOKUPS,PASS,all group medians fitted from data_split=train
+D15_PRICE_PREDICTIONS,PASS,price predictions complete
+D15_MULTIPLIER_PREDICTIONS,PASS,multiplier predictions complete
+D15_TRAIN_ONLY_LOOKUPS,PASS,all group medians fitted from data_split=train
+D30_PRICE_PREDICTIONS,PASS,price predictions complete
+D30_MULTIPLIER_PREDICTIONS,PASS,multiplier predictions complete
+D30_TRAIN_ONLY_LOOKUPS,PASS,all group medians fitted from data_split=train

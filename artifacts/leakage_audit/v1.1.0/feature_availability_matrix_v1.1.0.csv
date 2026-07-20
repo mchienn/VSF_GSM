@@ -1,0 +1,47 @@
+feature,feature_type,prediction_time_source,audit_status,allowed_for_price_ml
+cab_type,categorical,request context or deterministic prediction timestamp,SAFE_AS_IS,True
+name,categorical,request context or deterministic prediction timestamp,SAFE_AS_IS,True
+source,categorical,request context or deterministic prediction timestamp,SAFE_AS_IS,True
+destination,categorical,request context or deterministic prediction timestamp,SAFE_AS_IS,True
+short_summary,categorical,latest weather observation at or before prediction time; stale values masked,SAFE_ASOF_WEATHER,True
+observation_age_bucket,categorical,latest series observation at or before prediction_time-delay,SAFE_ASOF_DELAYED,True
+route_geodesic_km,numeric,frozen source/destination geocodes,SAFE_STATIC_ROUTE,True
+latitude,numeric,latest weather observation at or before prediction time; stale values masked,SAFE_ASOF_WEATHER,True
+longitude,numeric,latest weather observation at or before prediction time; stale values masked,SAFE_ASOF_WEATHER,True
+temperature,numeric,latest weather observation at or before prediction time; stale values masked,SAFE_ASOF_WEATHER,True
+apparentTemperature,numeric,latest weather observation at or before prediction time; stale values masked,SAFE_ASOF_WEATHER,True
+precipIntensity,numeric,latest weather observation at or before prediction time; stale values masked,SAFE_ASOF_WEATHER,True
+precipProbability,numeric,latest weather observation at or before prediction time; stale values masked,SAFE_ASOF_WEATHER,True
+humidity,numeric,latest weather observation at or before prediction time; stale values masked,SAFE_ASOF_WEATHER,True
+windSpeed,numeric,latest weather observation at or before prediction time; stale values masked,SAFE_ASOF_WEATHER,True
+windGust,numeric,latest weather observation at or before prediction time; stale values masked,SAFE_ASOF_WEATHER,True
+visibility,numeric,latest weather observation at or before prediction time; stale values masked,SAFE_ASOF_WEATHER,True
+dewPoint,numeric,latest weather observation at or before prediction time; stale values masked,SAFE_ASOF_WEATHER,True
+pressure,numeric,latest weather observation at or before prediction time; stale values masked,SAFE_ASOF_WEATHER,True
+windBearing,numeric,latest weather observation at or before prediction time; stale values masked,SAFE_ASOF_WEATHER,True
+cloudCover,numeric,latest weather observation at or before prediction time; stale values masked,SAFE_ASOF_WEATHER,True
+uvIndex,numeric,latest weather observation at or before prediction time; stale values masked,SAFE_ASOF_WEATHER,True
+ozone,numeric,latest weather observation at or before prediction time; stale values masked,SAFE_ASOF_WEATHER,True
+weather_age_minutes,numeric,latest weather observation at or before prediction time; stale values masked,SAFE_ASOF_WEATHER,True
+weather_available_asof,numeric,latest weather observation at or before prediction time; stale values masked,SAFE_ASOF_WEATHER,True
+event_hour_local,numeric,request context or deterministic prediction timestamp,SAFE_AS_IS,True
+event_weekday_local,numeric,request context or deterministic prediction timestamp,SAFE_AS_IS,True
+event_month_local,numeric,request context or deterministic prediction timestamp,SAFE_AS_IS,True
+is_weekend,numeric,request context or deterministic prediction timestamp,SAFE_AS_IS,True
+hour_sin,numeric,request context or deterministic prediction timestamp,SAFE_AS_IS,True
+hour_cos,numeric,request context or deterministic prediction timestamp,SAFE_AS_IS,True
+weekday_sin,numeric,request context or deterministic prediction timestamp,SAFE_AS_IS,True
+weekday_cos,numeric,request context or deterministic prediction timestamp,SAFE_AS_IS,True
+observation_age_minutes,numeric,latest series observation at or before prediction_time-delay,SAFE_ASOF_DELAYED,True
+lag1_price_median,numeric,latest series observation at or before prediction_time-delay,SAFE_ASOF_DELAYED,True
+lag2_price_median,numeric,latest series observation at or before prediction_time-delay,SAFE_ASOF_DELAYED,True
+lag3_price_median,numeric,latest series observation at or before prediction_time-delay,SAFE_ASOF_DELAYED,True
+lag1_multiplier_median,numeric,latest series observation at or before prediction_time-delay,SAFE_ASOF_DELAYED,True
+lag1_quote_count,numeric,latest series observation at or before prediction_time-delay,SAFE_ASOF_DELAYED,True
+lag1_price_spread,numeric,latest series observation at or before prediction_time-delay,SAFE_ASOF_DELAYED,True
+lag1_distance_median,numeric,latest series observation at or before prediction_time-delay,SAFE_ASOF_DELAYED,True
+lag_price_delta_1_2,numeric,latest series observation at or before prediction_time-delay,SAFE_ASOF_DELAYED,True
+history_price_mean_last3,numeric,latest series observation at or before prediction_time-delay,SAFE_ASOF_DELAYED,True
+history_price_std_last3,numeric,latest series observation at or before prediction_time-delay,SAFE_ASOF_DELAYED,True
+history_price_mean_last6,numeric,latest series observation at or before prediction_time-delay,SAFE_ASOF_DELAYED,True
+history_observation_count,numeric,latest series observation at or before prediction_time-delay,SAFE_ASOF_DELAYED,True

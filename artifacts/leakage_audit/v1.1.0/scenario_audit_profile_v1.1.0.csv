@@ -1,0 +1,4 @@
+delay_minutes,price_rows,multiplier_rows,minimum_observation_age_minutes,median_observation_age_minutes,weather_available_pct,history_value_mismatches,future_history_rows,future_weather_rows,future_split_dependencies
+5,571979,276758,5.0,20.0,99.90401745518629,0,0,0,0
+15,571846,276686,15.0,30.0,99.9039951315564,0,0,0,0
+30,571671,276602,30.0,45.0,99.90396574253373,0,0,0,0

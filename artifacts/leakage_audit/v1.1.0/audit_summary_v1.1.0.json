@@ -1,0 +1,23 @@
+{
+  "artifact_version": "1.1.0",
+  "input_modeling_data_version": "1.1.0",
+  "overall_status": "READY_FOR_PRICE_ML_POC_WITH_WARNINGS",
+  "primary_delay_minutes": 15,
+  "sensitivity_delay_minutes": [
+    5,
+    30
+  ],
+  "feature_count": 46,
+  "check_status_counts": {
+    "PASS": 30,
+    "WARNING": 2
+  },
+  "blocker_count": 0,
+  "failure_count": 0,
+  "warning_count": 2,
+  "strict_prediction_time_features_allowed": true,
+  "remaining_warnings": [
+    "Existing test is not fully blind because earlier EDA/baseline inspected it",
+    "Use rolling or blocked time-series CV inside train for ML selection"
+  ]
+}

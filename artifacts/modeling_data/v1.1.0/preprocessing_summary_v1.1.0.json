@@ -1,0 +1,43 @@
+{
+  "pipeline_version": "1.1.0",
+  "input_modeling_data_version": "1.0.0",
+  "primary_delay_minutes": 15,
+  "sensitivity_delay_minutes": [
+    5,
+    30
+  ],
+  "feature_count": 46,
+  "categorical_feature_count": 6,
+  "numeric_feature_count": 40,
+  "scenario_summary": {
+    "5": {
+      "price_rows": 571979,
+      "multiplier_rows": 276758,
+      "price_history_coverage_pct": 99.84917333370575,
+      "minimum_observation_age_minutes": 5.0,
+      "median_observation_age_minutes": 20.0,
+      "weather_available_pct": 99.90401745518629,
+      "maximum_available_weather_age_minutes": 61.516666412353516
+    },
+    "15": {
+      "price_rows": 571846,
+      "multiplier_rows": 276686,
+      "price_history_coverage_pct": 99.82595580289887,
+      "minimum_observation_age_minutes": 15.0,
+      "median_observation_age_minutes": 30.0,
+      "weather_available_pct": 99.9039951315564,
+      "maximum_available_weather_age_minutes": 61.516666412353516
+    },
+    "30": {
+      "price_rows": 571671,
+      "multiplier_rows": 276602,
+      "price_history_coverage_pct": 99.79540642025826,
+      "minimum_observation_age_minutes": 30.0,
+      "median_observation_age_minutes": 45.0,
+      "weather_available_pct": 99.90396574253373,
+      "maximum_available_weather_age_minutes": 61.516666412353516
+    }
+  },
+  "validation_checks": 21,
+  "validation_passed": 21
+}

@@ -1,0 +1,19 @@
+{
+  "artifact_version": "1.1.0",
+  "primary_delay_minutes": 15,
+  "primary_test_best_price_baseline": {
+    "model": "route_service_median",
+    "mae": 1.3014259683221978,
+    "rmse": 2.729739737285056
+  },
+  "primary_test_best_multiplier_baseline": {
+    "model": "constant_one",
+    "mae": 0.032406328868180935,
+    "rmse": 0.13971137428026723,
+    "surge_recall": 0.0,
+    "surge_f1": 0.0
+  },
+  "metric_rows": 42,
+  "validation_checks": 9,
+  "validation_passed": 9
+}

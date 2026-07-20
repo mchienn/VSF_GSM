@@ -1,0 +1,27 @@
+{
+  "artifact_version": "1.1.0",
+  "input_modeling_data_version": "1.1.0",
+  "primary_delay_minutes": 15,
+  "sensitivity_delay_minutes": [
+    5,
+    30
+  ],
+  "fit_split": "train",
+  "reported_splits": [
+    "calibration",
+    "test"
+  ],
+  "price_baselines": [
+    "global_median",
+    "persistence_asof",
+    "route_service_median"
+  ],
+  "multiplier_baselines": [
+    "constant_one",
+    "global_median",
+    "persistence_asof",
+    "route_service_median"
+  ],
+  "ml_validation_policy": "rolling or blocked time-series CV inside train",
+  "test_policy": "POC benchmark only because test was previously inspected"
+}

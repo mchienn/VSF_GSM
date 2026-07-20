@@ -1,0 +1,33 @@
+check_id,status,actual,expected,evidence
+A01,PASS,46,46,feature contract size
+A02,PASS,[],[],forbidden contemporaneous fields excluded
+A03,PASS,[],[],targets excluded from predictors
+D05_CUTOFF,PASS,0,0,cutoff equals prediction time minus configured delay
+D05_HISTORY_TIME,PASS,0,0,history observation is at or before cutoff
+D05_AGE,PASS,"{""mismatches"": 0, ""minimum"": 5.0}","{""mismatches"": 0, ""minimum"": "">=5""}",observation age consistency
+D05_HISTORY_VALUES,PASS,"{""lag1_price_median"": 0, ""lag2_price_median"": 0, ""lag3_price_median"": 0, ""lag1_multiplier_median"": 0, ""lag1_quote_count"": 0, ""lag1_price_spread"": 0, ""lag1_distance_median"": 0, ""lag_price_delta_1_2"": 0, ""history_price_mean_last3"": 0, ""history_price_std_last3"": 0, ""history_price_mean_last6"": 0, ""history_observation_count"": 0}",{},history features match selected past snapshot
+D05_WEATHER_TIME,PASS,0,0,weather observation is not from the future
+D05_WEATHER_STALE,PASS,"{""stale_with_values"": 0, ""available_too_old"": 0}","{""stale_with_values"": 0, ""available_too_old"": 0}",stale weather values masked
+D05_ROUTE,PASS,0,0,static geodesic route distance complete
+D05_SPLIT,PASS,"{""chronological"": true, ""future_dependencies"": 0}","{""chronological"": true, ""future_dependencies"": 0}",chronological split and causal cross-boundary history
+D05_LYFT_ONLY,PASS,0,0,multiplier table restricted to Lyft
+D15_CUTOFF,PASS,0,0,cutoff equals prediction time minus configured delay
+D15_HISTORY_TIME,PASS,0,0,history observation is at or before cutoff
+D15_AGE,PASS,"{""mismatches"": 0, ""minimum"": 15.0}","{""mismatches"": 0, ""minimum"": "">=15""}",observation age consistency
+D15_HISTORY_VALUES,PASS,"{""lag1_price_median"": 0, ""lag2_price_median"": 0, ""lag3_price_median"": 0, ""lag1_multiplier_median"": 0, ""lag1_quote_count"": 0, ""lag1_price_spread"": 0, ""lag1_distance_median"": 0, ""lag_price_delta_1_2"": 0, ""history_price_mean_last3"": 0, ""history_price_std_last3"": 0, ""history_price_mean_last6"": 0, ""history_observation_count"": 0}",{},history features match selected past snapshot
+D15_WEATHER_TIME,PASS,0,0,weather observation is not from the future
+D15_WEATHER_STALE,PASS,"{""stale_with_values"": 0, ""available_too_old"": 0}","{""stale_with_values"": 0, ""available_too_old"": 0}",stale weather values masked
+D15_ROUTE,PASS,0,0,static geodesic route distance complete
+D15_SPLIT,PASS,"{""chronological"": true, ""future_dependencies"": 0}","{""chronological"": true, ""future_dependencies"": 0}",chronological split and causal cross-boundary history
+D15_LYFT_ONLY,PASS,0,0,multiplier table restricted to Lyft
+D30_CUTOFF,PASS,0,0,cutoff equals prediction time minus configured delay
+D30_HISTORY_TIME,PASS,0,0,history observation is at or before cutoff
+D30_AGE,PASS,"{""mismatches"": 0, ""minimum"": 30.0}","{""mismatches"": 0, ""minimum"": "">=30""}",observation age consistency
+D30_HISTORY_VALUES,PASS,"{""lag1_price_median"": 0, ""lag2_price_median"": 0, ""lag3_price_median"": 0, ""lag1_multiplier_median"": 0, ""lag1_quote_count"": 0, ""lag1_price_spread"": 0, ""lag1_distance_median"": 0, ""lag_price_delta_1_2"": 0, ""history_price_mean_last3"": 0, ""history_price_std_last3"": 0, ""history_price_mean_last6"": 0, ""history_observation_count"": 0}",{},history features match selected past snapshot
+D30_WEATHER_TIME,PASS,0,0,weather observation is not from the future
+D30_WEATHER_STALE,PASS,"{""stale_with_values"": 0, ""available_too_old"": 0}","{""stale_with_values"": 0, ""available_too_old"": 0}",stale weather values masked
+D30_ROUTE,PASS,0,0,static geodesic route distance complete
+D30_SPLIT,PASS,"{""chronological"": true, ""future_dependencies"": 0}","{""chronological"": true, ""future_dependencies"": 0}",chronological split and causal cross-boundary history
+D30_LYFT_ONLY,PASS,0,0,multiplier table restricted to Lyft
+A04,WARNING,true,false,test was inspected in EDA/baseline v1.0.0; use as POC benchmark
+A05,WARNING,"""no standalone validation split""","""rolling/blocked CV inside train""",model selection protocol
