@@ -1,0 +1,11 @@
+task,data_split,previous_split,rows,dependency_interpretation
+price,calibration,calibration,108046,within-split past observation
+price,calibration,train,864,cross-split past observation; valid only for online rolling evaluation
+price,test,calibration,864,cross-split past observation; valid only for online rolling evaluation
+price,test,test,106151,within-split past observation
+price,train,train,355190,within-split past observation
+lyft_multiplier,calibration,calibration,52233,within-split past observation
+lyft_multiplier,calibration,train,432,cross-split past observation; valid only for online rolling evaluation
+lyft_multiplier,test,calibration,432,cross-split past observation; valid only for online rolling evaluation
+lyft_multiplier,test,test,51078,within-split past observation
+lyft_multiplier,train,train,172151,within-split past observation

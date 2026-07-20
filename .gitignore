@@ -62,3 +62,10 @@ artifacts/**
 !artifacts/baseline_models/v1.0.0/run_config_v1.0.0.json
 !artifacts/baseline_models/v1.0.0/split_audit_v1.0.0.csv
 !artifacts/baseline_models/v1.0.0/validation_results_v1.0.0.csv
+!artifacts/leakage_audit/
+!artifacts/leakage_audit/v1.0.0/
+!artifacts/leakage_audit/v1.0.0/audit_summary_v1.0.0.json
+!artifacts/leakage_audit/v1.0.0/check_results_v1.0.0.csv
+!artifacts/leakage_audit/v1.0.0/delay_scenario_coverage_v1.0.0.csv
+!artifacts/leakage_audit/v1.0.0/feature_availability_matrix_v1.0.0.csv
+!artifacts/leakage_audit/v1.0.0/split_dependency_profile_v1.0.0.csv

@@ -1,0 +1,45 @@
+feature,feature_type,pipeline_source,audit_status,required_action,allowed_for_strict_ml_v1_0
+cab_type,categorical,request context or deterministic prediction timestamp,SAFE_AS_IS,none,True
+name,categorical,request context or deterministic prediction timestamp,SAFE_AS_IS,none,True
+source,categorical,request context or deterministic prediction timestamp,SAFE_AS_IS,none,True
+destination,categorical,request context or deterministic prediction timestamp,SAFE_AS_IS,none,True
+short_summary,categorical,aggregation of weather fields inside the target 5-minute bucket,REBUILD_ASOF_PREDICTION_TIME,join weather issued at or before prediction time; do not aggregate future rows in target bucket,False
+observation_age_bucket,categorical,strictly previous snapshots via shift/rolling,SAFE_AFTER_DELAY_PROTOCOL,select observations using an as-of cutoff t-delay,False
+distance_median,numeric,median of quote rows inside the target 5-minute bucket,REBUILD_FROM_REQUEST_TIME_SOURCE,use request/route distance known at prediction time or lagged/train-only route distance,False
+latitude,numeric,aggregation of weather fields inside the target 5-minute bucket,REBUILD_ASOF_PREDICTION_TIME,join weather issued at or before prediction time; do not aggregate future rows in target bucket,False
+longitude,numeric,aggregation of weather fields inside the target 5-minute bucket,REBUILD_ASOF_PREDICTION_TIME,join weather issued at or before prediction time; do not aggregate future rows in target bucket,False
+temperature,numeric,aggregation of weather fields inside the target 5-minute bucket,REBUILD_ASOF_PREDICTION_TIME,join weather issued at or before prediction time; do not aggregate future rows in target bucket,False
+apparentTemperature,numeric,aggregation of weather fields inside the target 5-minute bucket,REBUILD_ASOF_PREDICTION_TIME,join weather issued at or before prediction time; do not aggregate future rows in target bucket,False
+precipIntensity,numeric,aggregation of weather fields inside the target 5-minute bucket,REBUILD_ASOF_PREDICTION_TIME,join weather issued at or before prediction time; do not aggregate future rows in target bucket,False
+precipProbability,numeric,aggregation of weather fields inside the target 5-minute bucket,REBUILD_ASOF_PREDICTION_TIME,join weather issued at or before prediction time; do not aggregate future rows in target bucket,False
+humidity,numeric,aggregation of weather fields inside the target 5-minute bucket,REBUILD_ASOF_PREDICTION_TIME,join weather issued at or before prediction time; do not aggregate future rows in target bucket,False
+windSpeed,numeric,aggregation of weather fields inside the target 5-minute bucket,REBUILD_ASOF_PREDICTION_TIME,join weather issued at or before prediction time; do not aggregate future rows in target bucket,False
+windGust,numeric,aggregation of weather fields inside the target 5-minute bucket,REBUILD_ASOF_PREDICTION_TIME,join weather issued at or before prediction time; do not aggregate future rows in target bucket,False
+visibility,numeric,aggregation of weather fields inside the target 5-minute bucket,REBUILD_ASOF_PREDICTION_TIME,join weather issued at or before prediction time; do not aggregate future rows in target bucket,False
+dewPoint,numeric,aggregation of weather fields inside the target 5-minute bucket,REBUILD_ASOF_PREDICTION_TIME,join weather issued at or before prediction time; do not aggregate future rows in target bucket,False
+pressure,numeric,aggregation of weather fields inside the target 5-minute bucket,REBUILD_ASOF_PREDICTION_TIME,join weather issued at or before prediction time; do not aggregate future rows in target bucket,False
+windBearing,numeric,aggregation of weather fields inside the target 5-minute bucket,REBUILD_ASOF_PREDICTION_TIME,join weather issued at or before prediction time; do not aggregate future rows in target bucket,False
+cloudCover,numeric,aggregation of weather fields inside the target 5-minute bucket,REBUILD_ASOF_PREDICTION_TIME,join weather issued at or before prediction time; do not aggregate future rows in target bucket,False
+uvIndex,numeric,aggregation of weather fields inside the target 5-minute bucket,REBUILD_ASOF_PREDICTION_TIME,join weather issued at or before prediction time; do not aggregate future rows in target bucket,False
+ozone,numeric,aggregation of weather fields inside the target 5-minute bucket,REBUILD_ASOF_PREDICTION_TIME,join weather issued at or before prediction time; do not aggregate future rows in target bucket,False
+event_hour_local,numeric,request context or deterministic prediction timestamp,SAFE_AS_IS,none,True
+event_weekday_local,numeric,request context or deterministic prediction timestamp,SAFE_AS_IS,none,True
+event_month_local,numeric,request context or deterministic prediction timestamp,SAFE_AS_IS,none,True
+is_weekend,numeric,request context or deterministic prediction timestamp,SAFE_AS_IS,none,True
+hour_sin,numeric,request context or deterministic prediction timestamp,SAFE_AS_IS,none,True
+hour_cos,numeric,request context or deterministic prediction timestamp,SAFE_AS_IS,none,True
+weekday_sin,numeric,request context or deterministic prediction timestamp,SAFE_AS_IS,none,True
+weekday_cos,numeric,request context or deterministic prediction timestamp,SAFE_AS_IS,none,True
+observation_age_minutes,numeric,strictly previous snapshots via shift/rolling,SAFE_AFTER_DELAY_PROTOCOL,select observations using an as-of cutoff t-delay,False
+lag1_price_median,numeric,strictly previous snapshots via shift/rolling,SAFE_AFTER_DELAY_PROTOCOL,select observations using an as-of cutoff t-delay,False
+lag2_price_median,numeric,strictly previous snapshots via shift/rolling,SAFE_AFTER_DELAY_PROTOCOL,select observations using an as-of cutoff t-delay,False
+lag3_price_median,numeric,strictly previous snapshots via shift/rolling,SAFE_AFTER_DELAY_PROTOCOL,select observations using an as-of cutoff t-delay,False
+lag1_multiplier_median,numeric,strictly previous snapshots via shift/rolling,SAFE_AFTER_DELAY_PROTOCOL,select observations using an as-of cutoff t-delay,False
+lag1_quote_count,numeric,strictly previous snapshots via shift/rolling,SAFE_AFTER_DELAY_PROTOCOL,select observations using an as-of cutoff t-delay,False
+lag1_price_spread,numeric,strictly previous snapshots via shift/rolling,SAFE_AFTER_DELAY_PROTOCOL,select observations using an as-of cutoff t-delay,False
+lag1_distance_median,numeric,strictly previous snapshots via shift/rolling,SAFE_AFTER_DELAY_PROTOCOL,select observations using an as-of cutoff t-delay,False
+lag_price_delta_1_2,numeric,strictly previous snapshots via shift/rolling,SAFE_AFTER_DELAY_PROTOCOL,select observations using an as-of cutoff t-delay,False
+history_price_mean_last3,numeric,strictly previous snapshots via shift/rolling,SAFE_AFTER_DELAY_PROTOCOL,select observations using an as-of cutoff t-delay,False
+history_price_std_last3,numeric,strictly previous snapshots via shift/rolling,SAFE_AFTER_DELAY_PROTOCOL,select observations using an as-of cutoff t-delay,False
+history_price_mean_last6,numeric,strictly previous snapshots via shift/rolling,SAFE_AFTER_DELAY_PROTOCOL,select observations using an as-of cutoff t-delay,False
+history_observation_count,numeric,strictly previous snapshots via shift/rolling,SAFE_AFTER_DELAY_PROTOCOL,select observations using an as-of cutoff t-delay,False

@@ -1,0 +1,15 @@
+check_id,status,actual,expected,evidence
+L01,PASS,44,44,feature contract size
+L02,PASS,true,true,strict chronological split order
+L03,PASS,[],[],forbidden current diagnostics excluded
+L04,PASS,[],[],targets excluded from predictors
+L05,PASS,0,0,previous timestamp is causal group shift
+L06,PASS,"{""lag1_price_median"": 0, ""lag2_price_median"": 0, ""lag3_price_median"": 0, ""lag1_multiplier_median"": 0, ""lag1_quote_count"": 0, ""lag1_price_spread"": 0, ""lag1_distance_median"": 0}",{},lag values match prior targets/diagnostics
+L07,PASS,"{""history_price_mean_last3"": 0, ""history_price_std_last3"": 0, ""history_price_mean_last6"": 0}",{},rolling histories use shifted price
+L08,PASS,0,0,observation age matches prior timestamp
+L09,PASS,"{""delta"": 0, ""history_count"": 0}","{""delta"": 0, ""history_count"": 0}",derived history checks
+L10,PASS,0,0,no dependency on a later split
+L11,BLOCKER,"[""short_summary"", ""observation_age_bucket"", ""distance_median"", ""latitude"", ""longitude"", ""temperature"", ""apparentTemperature"", ""precipIntensity"", ""precipProbability"", ""humidity"", ""windSpeed"", ""windGust"", ""visibility"", ""dewPoint"", ""pressure"", ""windBearing"", ""cloudCover"", ""uvIndex"", ""ozone"", ""observation_age_minutes"", ""lag1_price_median"", ""lag2_price_median"", ""lag3_price_median"", ""lag1_multiplier_median"", ""lag1_quote_count"", ""lag1_price_spread"", ""lag1_distance_median"", ""lag_price_delta_1_2"", ""history_price_mean_last3"", ""history_price_std_last3"", ""history_price_mean_last6"", ""history_observation_count""]",[],prediction-time feature provenance
+L12,BLOCKER,"""no minimum competitor observation delay is selected""","""explicit delay plus as-of feature builder""",delay protocol
+L13,WARNING,true,false,test blindness
+L14,WARNING,"""no standalone validation split""","""rolling/blocked CV inside train""",ML model-selection protocol
