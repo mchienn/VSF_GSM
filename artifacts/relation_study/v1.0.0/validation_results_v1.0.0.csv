@@ -1,0 +1,7 @@
+check,passed,actual,expected
+all_12_locations_geocoded,True,12,12
+center_proxy_geocoded,True,1,1
+destination_profile_complete,True,12,12
+centrality_relations_complete,True,3,3
+required_relation_groups_covered,True,"['delayed_multiplier_history', 'delayed_price_history', 'location_category', 'observation_age', 'service_distance', 'time', 'weather']",required groups
+feature_coverage_has_decisions,True,0,0

@@ -1,0 +1,18 @@
+{
+  "relation_study_version": "1.0.0",
+  "eda_version": "1.0.0",
+  "center_proxy": "Boston City Hall",
+  "center_proxy_basis": "Boston.gov describes City Hall as being in the heart of downtown Boston.",
+  "destinations": 12,
+  "centrality_vs_raw_price_spearman": 0.7411988434213088,
+  "centrality_vs_adjusted_price_spearman": -0.02097902097902098,
+  "centrality_vs_adjusted_price_p_exploratory": 0.9484022252365223,
+  "centrality_vs_lyft_surge_spearman": 0.3356643356643357,
+  "centrality_feature_decision": "LOW_PRIORITY_PROXY",
+  "candidate_feature_columns": 44,
+  "categorical_feature_columns": 6,
+  "numeric_feature_columns": 38,
+  "recommended_feature_groups": 7,
+  "missing_feature_groups": 2,
+  "completion": "PART_I_RELATION_STUDY_COMPLETE_FOR_AVAILABLE_DATA"
+}

@@ -1,0 +1,8 @@
+check,passed,actual,expected
+price_contains_uber,True,295221,>0
+price_contains_lyft,True,276758,>0
+multiplier_lyft_only,True,0,0
+feature_decisions_train_only,True,train,train
+price_per_mile_not_recommended_as_predictor,True,EDA_ONLY,EDA_ONLY
+weather_profile_complete,True,14,14
+all_figures_created,True,7,7

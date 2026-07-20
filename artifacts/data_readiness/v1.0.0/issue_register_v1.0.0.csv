@@ -1,0 +1,12 @@
+issue_id,issue,evidence,severity,fixability,treatment,residual_limitation
+DR-001,Timestamp unit,timestamp is 10-digit epoch seconds,HIGH,FIXABLE,Parse with unit='s'; canonicalize timezone and recompute hour/day/month.,None after validation.
+DR-002,Timestamp representation mismatch,153 rows >5 min; max 5.20 min,LOW,FIXABLE,Use timestamp as canonical; allow 6-minute validation tolerance; keep datetime for QA only.,Second-level query jitter remains.
+DR-003,Missing price,"55,095 rows; all Uber Taxi",HIGH,PARTIAL,Exclude Uber Taxi from supervised price training; retain for availability analysis.,Original Taxi prices cannot be recovered.
+DR-004,Uber multiplier has no variation,"385,663 Uber rows; multiplier always 1",HIGH,NOT_FIXABLE,Do not train explicit Uber multiplier; predict price or construct separately validated pseudo-multiplier.,No ground-truth Uber surge label.
+DR-005,Lyft surge class imbalance,Most Lyft rows have multiplier=1; surge tail is sparse,MEDIUM,MITIGATABLE,Report tail metrics; use class/sample weighting or ordinal model if modeling discrete levels.,Very rare 2.5/3.0 levels remain uncertain.
+DR-006,Irregular sampling,Median gap 16.55 min; p90 64.93 min,HIGH,MITIGATABLE,"Use event-time lags, observation_age and age-bucket evaluation; never treat missing intervals as labels.",Cannot create unobserved true quotes.
+DR-007,Missing calendar dates,"6 dates absent: 2018-12-05, 2018-12-06, 2018-12-07, 2018-12-08, 2018-12-11, 2018-12-12",MEDIUM,NOT_FIXABLE,Preserve gaps; split chronologically by contiguous blocks; do not interpolate across missing days.,Only 17 observed dates.
+DR-008,Natural-key quote collisions,13061 timestamp/route/service groups; many price/distance conflicts,MEDIUM,FIXABLE,Keep raw IDs; for history build 5-minute snapshot aggregates with count/spread/distance statistics.,Aggregation loses quote-level detail; retain raw layer.
+DR-009,Potential weather leakage,Daily high/low/max and event-time provenance are unclear,HIGH,FIXABLE,Apply feature whitelist; exclude daily/future summaries pending provenance; only as-of joins.,Historical POC may use fewer weather features.
+DR-010,Short and narrow domain,"Boston only, 72 routes, 17 observed dates",HIGH,NOT_FIXABLE,Limit claims to methodology/POC; use temporal slices and abstention for sparse contexts.,No production generalization proof.
+DR-011,No Vietnam market data,Source market is Boston,HIGH,NOT_FIXABLE,Do not claim Vietnam calibration; require future local collection before deployment.,Domain shift cannot be estimated from this dataset.

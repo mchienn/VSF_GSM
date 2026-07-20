@@ -1,0 +1,13 @@
+feature_group,features,decision,rationale
+Delayed price history,"lag1/2/3 price, rolling mean/std, price delta",KEEP_HIGH,Central signal for delayed-observation forecasting; all values are shifted.
+Freshness,"observation_age_minutes, log1p(age), age bucket interactions",KEEP_HIGH_ENGINEER,Persistence error changes with staleness; use nonlinear age and age-by-lag interactions.
+Route and service,"cab_type, name, source, destination, direction-specific route",KEEP_HIGH,Large structural fare differences; use native categorical handling or leakage-safe encoding.
+Distance,distance_median plus service interaction,KEEP_HIGH_ENGINEER,Strong pricing basis; test nonlinear distance and distance-by-service interactions.
+Time,hour/weekday plus sin-cos and hour-by-weekday,KEEP_ENGINEER,Ride pricing is periodic; preserve cyclic representation and rush-hour interactions.
+Weather price candidates,"humidity, cloudCover, windBearing, precipIntensity, precipProbability",LOW_PRIORITY_ABLATION,Adjusted associations are near zero in this dataset; retain only for a grouped out-of-time ablation.
+Weather multiplier candidates,"pressure, ozone, windGust, apparentTemperature, precipProbability",LOW_PRIORITY_ABLATION,Surge associations are near zero here despite domain literature; retain only for grouped out-of-time ablation.
+Correlated weather,4 pairs with |rho| >= 0.80,GROUP_OR_REGULARIZE,Do not interpret individual correlated weather importances naively; cluster or use grouped permutation.
+Lyft multiplier target,5-minute median regression plus surge>1 auxiliary label,MODEL_BOTH,Snapshot median can create intermediate values; use regression for this target and binary surge diagnostics. Build a separate mode/raw-level target only if ordinal classification is required.
+Price per mile,price/distance,EDA_ONLY,"Useful diagnostic but unstable for short trips and derived from current target, so never use as predictor."
+Current bucket diagnostics,"quote_count, price min/max/spread",EXCLUDE_MODEL,They contain contemporaneous target information and are retained only in snapshot QA.
+Daily/future weather and IDs,"daily extrema, event times, id/product_id",EXCLUDE,Leakage/provenance or high-cardinality trace-only fields.

@@ -1,0 +1,20 @@
+{
+  "pipeline_version": "1.0.0",
+  "audit_version": "1.0.0",
+  "feature_policy_version": "1.0.0",
+  "split_policy_version": "1.0.0",
+  "source_sha256": "7da8b098070331dd34b3bf2a6c31088edc3ec1279e9d9b5e336710a001a24e97",
+  "canonical_rows": 693071,
+  "snapshot_rows": 572843,
+  "price_modeling_rows": 571979,
+  "lyft_multiplier_modeling_rows": 276758,
+  "price_split_rows": {
+    "train": 356054,
+    "calibration": 108910,
+    "test": 107015
+  },
+  "validation_checks": 14,
+  "validation_passed": 14,
+  "readiness_for_eda": "READY",
+  "production_vietnam_readiness": "NOT_VALIDATED"
+}

@@ -1,0 +1,54 @@
+{
+  "audit_version": "1.0.0",
+  "policy_version": "1.0.0",
+  "source_file": "rideshare_kaggle.csv.zip",
+  "source_sha256": "7da8b098070331dd34b3bf2a6c31088edc3ec1279e9d9b5e336710a001a24e97",
+  "rows": 693071,
+  "columns": 57,
+  "unique_ids": 693071,
+  "timestamp_start": "2018-11-26T03:40:46+00:00",
+  "timestamp_end": "2018-12-18T19:15:11+00:00",
+  "observed_dates": 17,
+  "missing_dates": [
+    "2018-12-05",
+    "2018-12-06",
+    "2018-12-07",
+    "2018-12-08",
+    "2018-12-11",
+    "2018-12-12"
+  ],
+  "routes": 72,
+  "services_total": 13,
+  "priced_series": 864,
+  "price_missing": 55095,
+  "price_missing_pct": 7.9494,
+  "timestamp_mismatch_gt_5min": 153,
+  "timestamp_mismatch_max_min": 5.2,
+  "gap_minutes": {
+    "p10": 2.9833,
+    "p25": 6.0,
+    "p50": 16.55,
+    "p75": 35.0833,
+    "p90": 64.9333,
+    "p95": 85.0333,
+    "p99": 149.95
+  },
+  "duplicate_summary": {
+    "duplicate_natural_key_rows": 26439,
+    "duplicate_natural_key_groups": 13061,
+    "groups_with_price_conflict": 8251,
+    "groups_with_distance_conflict": 8515,
+    "interpretation": "Quote collisions, not exact duplicates; IDs are unique and distance/price can differ."
+  },
+  "snapshot_summary": {
+    "priced_rows": 637976.0,
+    "snapshot_groups": 572843.0,
+    "five_min_buckets": 3849.0,
+    "priced_series": 864.0,
+    "panel_fill_pct": 17.2256,
+    "quote_count_p50": 1.0,
+    "quote_count_p90": 2.0,
+    "price_spread_gt_0_pct": 7.221
+  },
+  "readiness_verdict": "READY_FOR_POC_AFTER_MANDATORY_TRANSFORMS; NOT_READY_FOR_VIETNAM_PRODUCTION_VALIDATION"
+}

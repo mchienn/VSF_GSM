@@ -1,0 +1,15 @@
+check,passed,actual,expected
+row_count_source,True,693071,693071
+unique_raw_id,True,693071,693071
+canonical_timestamp_complete,True,0,0
+taxi_excluded_from_price_target,True,0,0
+price_model_has_history,True,0,0
+multiplier_model_lyft_only,True,0,0
+no_forbidden_current_target_features,True,[],[]
+all_rows_have_split,True,0,0
+chronological_split_order,True,"{""train"": 0, ""calibration"": 1, ""test"": 2}","{""train"": 0, ""calibration"": 1, ""test"": 2}"
+calibration_minimum_rows,True,108910,""">=50000"""
+calibration_series_coverage,True,1.0,""">=0.95"""
+snapshot_id_unique,True,572843,572843
+nonnegative_observation_age,True,5.0,""">0"""
+source_sha_matches_audit,True,"""7da8b098070331dd34b3bf2a6c31088edc3ec1279e9d9b5e336710a001a24e97""","""audit source hash"""

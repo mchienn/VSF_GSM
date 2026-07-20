@@ -1,0 +1,27 @@
+{
+  "eda_version": "1.0.0",
+  "decision_scope": "Train split only for feature conclusions; calibration/test used only for drift/freshness diagnostics.",
+  "price_train_rows": 356054,
+  "multiplier_train_rows": 172583,
+  "uber_price_rows_all_splits": 295221,
+  "lyft_price_rows_all_splits": 276758,
+  "uber_taxi_raw_rows_excluded_from_price_target": 55095,
+  "price_lag1_spearman_train": 0.9489433047782896,
+  "multiplier_lag1_spearman_train": 0.03644125301377829,
+  "price_persistence_test_mae": 1.9559482315563237,
+  "price_route_service_median_test_mae": 1.3014259683221978,
+  "multiplier_constant_1_test_mae": 0.032406328868180935,
+  "multiplier_persistence_test_mae": 0.05960493108134343,
+  "lyft_multiplier_1_share_train_pct": 92.6313715719393,
+  "strongest_adjusted_price_weather_feature": {
+    "feature": "humidity",
+    "spearman": -0.004947259773653701
+  },
+  "strongest_surge_weather_feature": {
+    "feature": "pressure",
+    "spearman": -0.008422238311619179
+  },
+  "test_persistence_mae_00_15": 1.9777263177998472,
+  "test_persistence_mae_120_plus": 2.027400703871292,
+  "correlated_numeric_pairs_abs_rho_ge_0_80": 4
+}

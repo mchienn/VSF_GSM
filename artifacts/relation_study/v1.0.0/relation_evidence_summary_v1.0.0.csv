@@ -1,0 +1,11 @@
+feature_group,target,evidence_strength,result,evidence_source
+service_distance,price,STRONG,Service median price spans $7-$30; route-service median baseline test MAE is $1.301.,price_service_profile; baseline_diagnostics
+delayed_price_history,price,STRONG_BUT_NOT_STANDALONE,Lag1 rho=0.949; persistence MAE $1.956 is worse than structural baseline.,key_findings; baseline_diagnostics
+time,price,SMALL,Adjusted hourly mean range=0.315 USD across provider-hour profiles.,price_time_profile
+time,multiplier,SMALL,Hourly Lyft surge-rate range=2.710 percentage points.,multiplier_time_profile
+location_category,price,SMALL_TO_MODERATE,Destination adjusted-price range=0.555 USD.,price_route_profile
+location_category,multiplier,SMALL,Destination surge-rate range=1.053 percentage points.,multiplier_route_profile
+weather,price,NEGLIGIBLE_MARGINAL,Max adjusted |rho|=0.0049.,weather_associations
+weather,multiplier,NEGLIGIBLE_MARGINAL,Max surge-indicator |rho|=0.0084.,weather_associations
+delayed_multiplier_history,multiplier,WEAK,Lag1 rho=0.036; constant-1 beats lag1 persistence on test MAE.,key_findings; baseline_diagnostics
+observation_age,price,SMALL_DIRECT_BUT_OPERATIONAL,Test persistence MAE range=0.122 USD; age remains needed for reliability gating.,price_freshness_profile

@@ -1,0 +1,9 @@
+check_id,status,evidence
+B01,PASS,price train row count
+B02,PASS,multiplier train row count
+B03,PASS,price lag1 complete
+B04,PASS,multiplier lag1 complete
+B05,PASS,price hierarchical prediction complete
+B06,PASS,multiplier hierarchical prediction complete
+B07,PASS,all MAE values finite
+B08,PASS,price evaluation excludes train

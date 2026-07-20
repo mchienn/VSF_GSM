@@ -1,0 +1,7 @@
+check_id,status,evidence
+V01,PASS,"Matrix contains all four required statuses"
+V02,PASS,"All sources are assigned a domain, joinability assessment, limitation, and action"
+V03,PASS,"Public 2018 TNC workbook inspected: Municipality_Data has 13 columns and no date/time/route fields"
+V04,PASS,"Decision explicitly addresses whether to build modeling data v1.1.0"
+V05,PASS,"Report distinguishes public proxies from restricted high-resolution sources"
+V06,PASS,"No external dataset was merged into existing modeling artifacts"

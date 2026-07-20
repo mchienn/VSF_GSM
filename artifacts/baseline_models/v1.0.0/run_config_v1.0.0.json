@@ -1,0 +1,30 @@
+{
+  "artifact_version": "1.0.0",
+  "input_modeling_data_version": "1.0.0",
+  "fit_split": "train",
+  "reported_splits": [
+    "calibration",
+    "test"
+  ],
+  "standalone_validation_split": false,
+  "future_ml_validation_policy": "rolling or blocked time-series CV inside train",
+  "calibration_policy": "reserve for uncertainty calibration; do not tune ML hyperparameters on it",
+  "test_policy": "fixed chronological holdout; baseline benchmark recorded before ML",
+  "price_baselines": [
+    "global_median",
+    "persistence_lag1",
+    "route_service_median"
+  ],
+  "multiplier_baselines": [
+    "constant_one",
+    "global_median",
+    "persistence_lag1",
+    "route_service_median"
+  ],
+  "group_median_fallback": [
+    "route_service",
+    "service",
+    "provider",
+    "global"
+  ]
+}

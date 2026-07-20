@@ -1,0 +1,23 @@
+{
+  "artifact_version": "1.0.0",
+  "study_date": "2026-07-20",
+  "target_market": "Boston",
+  "target_observation_period_utc": ["2018-11-26", "2018-12-18"],
+  "required_join_resolution": "prefer 5-minute; hourly acceptable for proxy analysis",
+  "classification_counts": {
+    "ADDABLE_NOW": 1,
+    "PROXY_ONLY": 2,
+    "RESTRICTED": 3,
+    "NOT_JOINABLE": 3
+  },
+  "decision": "KEEP_V1_0_0",
+  "build_modeling_data_v1_1_0_now": false,
+  "reason": "No currently public source provides complete and defensible time-space coverage of traffic, events, and rideshare supply-demand for the 17 observed dates. The only immediately addable source is a partial professional-sports event flag, which is too narrow to justify rerunning the relation study.",
+  "unlock_conditions_for_v1_1_0": [
+    "Obtain RITIS/NPMRDS or RM3P access and demonstrate route/time coverage",
+    "Obtain confidential Massachusetts trip-level TNC access",
+    "Recover original Uber Movement Boston Q4 2018 files and pass coverage/mapping checks",
+    "Acquire a historical event archive with verified event datetime, venue, and adequate Boston coverage"
+  ],
+  "current_research_conclusion": "Traffic, events, and supply-demand remain unobserved confounders. Existing relation-study results are descriptive associations, not complete causal explanations."
+}

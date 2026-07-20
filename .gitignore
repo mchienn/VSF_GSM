@@ -1,0 +1,64 @@
+# Raw and temporary data
+*.zip
+*.csv.zip
+tmp/
+
+# Generated binary artifacts and documents
+*.parquet
+*.png
+*.pdf
+*.docx
+output/
+qa/
+qa_round*/
+
+# Python environments and caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated artifacts are ignored by default. Keep only compact contracts,
+# audit summaries, experiment metrics, and decisions needed for collaboration.
+artifacts/**
+!artifacts/data_readiness/
+!artifacts/data_readiness/v1.0.0/
+!artifacts/data_readiness/v1.0.0/audit_summary_v1.0.0.json
+!artifacts/data_readiness/v1.0.0/issue_register_v1.0.0.csv
+!artifacts/data_readiness/v1.0.0/validation_results_v1.0.0.csv
+!artifacts/modeling_data/
+!artifacts/modeling_data/v1.0.0/
+!artifacts/modeling_data/v1.0.0/feature_contract_v1.0.0.json
+!artifacts/modeling_data/v1.0.0/preprocessing_summary_v1.0.0.json
+!artifacts/modeling_data/v1.0.0/split_profile_v1.0.0.csv
+!artifacts/modeling_data/v1.0.0/validation_results_v1.0.0.csv
+!artifacts/eda/
+!artifacts/eda/v1.0.0/
+!artifacts/eda/v1.0.0/feature_recommendations_v1.0.0.csv
+!artifacts/eda/v1.0.0/key_findings_v1.0.0.json
+!artifacts/eda/v1.0.0/validation_results_v1.0.0.csv
+!artifacts/relation_study/
+!artifacts/relation_study/v1.0.0/
+!artifacts/relation_study/v1.0.0/relation_evidence_summary_v1.0.0.csv
+!artifacts/relation_study/v1.0.0/relation_study_summary_v1.0.0.json
+!artifacts/relation_study/v1.0.0/validation_results_v1.0.0.csv
+!artifacts/supplemental_data_feasibility/
+!artifacts/supplemental_data_feasibility/v1.0.0/
+!artifacts/supplemental_data_feasibility/v1.0.0/decision_summary_v1.0.0.json
+!artifacts/supplemental_data_feasibility/v1.0.0/source_feasibility_matrix_v1.0.0.csv
+!artifacts/supplemental_data_feasibility/v1.0.0/validation_results_v1.0.0.csv
+!artifacts/baseline_models/
+!artifacts/baseline_models/v1.0.0/
+!artifacts/baseline_models/v1.0.0/baseline_diagnostics_v1.0.0.csv
+!artifacts/baseline_models/v1.0.0/baseline_metrics_v1.0.0.csv
+!artifacts/baseline_models/v1.0.0/run_config_v1.0.0.json
+!artifacts/baseline_models/v1.0.0/split_audit_v1.0.0.csv
+!artifacts/baseline_models/v1.0.0/validation_results_v1.0.0.csv
