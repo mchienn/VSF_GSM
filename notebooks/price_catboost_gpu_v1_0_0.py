@@ -25,6 +25,7 @@ JOB_VERSION = "1.0.0"
 DATA_VERSION = "1.1.0"
 REPO_COMMIT = "d2eac43e998fc2589e1f73f4c54500a6aeb7f38a"
 REPO_URL = "https://github.com/mchienn/VSF_GSM.git"
+RAW_DATASET_HANDLE = "brllrb/uber-and-lyft-dataset-boston-ma"
 PRIMARY_DELAY = 15
 DELAYS = [5, 15, 30]
 RANDOM_SEED = 42
@@ -53,7 +54,7 @@ def load_module(path: Path, module_name: str):
 
 
 def locate_raw_csv() -> Path:
-    matches = sorted(Path("/kaggle/input").rglob("uber_lyft.csv"))
+    matches = sorted(Path("/kaggle/input").rglob("rideshare_kaggle.csv"))
     if len(matches) == 1:
         return matches[0]
     if len(matches) > 1:
@@ -63,12 +64,10 @@ def locate_raw_csv() -> Path:
     # attach a public dataset even when save_notebook did not mount its source.
     import kagglehub
 
-    dataset_dir = Path(
-        kagglehub.dataset_download("miteshsingh11/uber-lyft-dataset-for-dsem-33201")
-    )
-    matches = sorted(dataset_dir.rglob("uber_lyft.csv"))
+    dataset_dir = Path(kagglehub.dataset_download(RAW_DATASET_HANDLE))
+    matches = sorted(dataset_dir.rglob("rideshare_kaggle.csv"))
     if len(matches) != 1:
-        raise RuntimeError(f"Expected one KaggleHub uber_lyft.csv, found {matches}")
+        raise RuntimeError(f"Expected one KaggleHub rideshare_kaggle.csv, found {matches}")
     return matches[0]
 
 
