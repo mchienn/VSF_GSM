@@ -86,3 +86,6 @@ artifacts/**
 !artifacts/leakage_audit/v1.1.0/check_results_v1.1.0.csv
 !artifacts/leakage_audit/v1.1.0/feature_availability_matrix_v1.1.0.csv
 !artifacts/leakage_audit/v1.1.0/scenario_audit_profile_v1.1.0.csv
+
+# Ngoai le: tai lieu ke hoach cua nhom (ban docx de nop form + ban md de review)
+!docs/*.docx
