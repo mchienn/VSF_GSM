@@ -54,8 +54,21 @@ def load_module(path: Path, module_name: str):
 
 def locate_raw_csv() -> Path:
     matches = sorted(Path("/kaggle/input").rglob("uber_lyft.csv"))
-    if len(matches) != 1:
+    if len(matches) == 1:
+        return matches[0]
+    if len(matches) > 1:
         raise RuntimeError(f"Expected one uber_lyft.csv, found {matches}")
+
+    # KaggleHub is authenticated automatically inside Kaggle notebooks and can
+    # attach a public dataset even when save_notebook did not mount its source.
+    import kagglehub
+
+    dataset_dir = Path(
+        kagglehub.dataset_download("miteshsingh11/uber-lyft-dataset-for-dsem-33201")
+    )
+    matches = sorted(dataset_dir.rglob("uber_lyft.csv"))
+    if len(matches) != 1:
+        raise RuntimeError(f"Expected one KaggleHub uber_lyft.csv, found {matches}")
     return matches[0]
 
 
